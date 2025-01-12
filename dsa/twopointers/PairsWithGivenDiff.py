@@ -2,12 +2,12 @@
 
 #Count all distinct pairs with difference equal to B.
 
-def count_pairs_with_given_difference(A, B):
+def count_pairs_with_given_difference(arr, target):
     count = 0
     values = []
-    for i in range(len(A)):
-        val = (B + A[i])
-        arr = A[0:i] + A[i + 1:]
+    for i in range(len(arr)):
+        val = (target + arr[i])
+        arr = arr[0:i] + arr[i + 1:]
 
         if val in arr and val not in values:
             values.append(val)

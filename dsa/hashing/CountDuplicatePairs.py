@@ -2,20 +2,20 @@
 # A[i] == A[j] where i != j and (i, j) = (j, i)
 
 # Method 1
-def count_duplicate_pairs(A):
+def count_duplicate_pairs(arr):
     freq = {}
     count = 0
-    for val in A:
+    for val in arr:
         if val in freq:
             count += freq.get(val)
         freq[val] = freq.get(val, 0) + 1
     return count
 
 # Method 2 = nC2 = n(n-1)/2
-def count_duplicate_pairs_1(A):
+def count_duplicate_pairs_1(arr):
     freq = {}
     count = 0
-    for val in A:
+    for val in arr:
         freq[val] = freq.get(val, 0) + 1
     for val in freq.values():
         count += val * (val - 1) // 2

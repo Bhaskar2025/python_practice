@@ -1,8 +1,8 @@
 #Given an unsorted integer array A of size N.
 #Find the length of the longest set of consecutive elements from array A.
 
-def longest_consecutive_sequence(A):
-    values = set(A)
+def longest_consecutive_sequence(arr):
+    values = set(arr)
     max_count = 0
     for val in values:
         if (val - 1) in values:
